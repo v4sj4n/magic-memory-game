@@ -40,7 +40,6 @@ function App() {
     if (choiceOne && choiceTwo) {
       setDisabled(true);
       if (choiceOne.src === choiceTwo.src) {
-        console.log('those cards match');
         setCards((prevCards) => {
           return prevCards.map((card) => {
             if (card.src === choiceOne.src) {
@@ -52,7 +51,6 @@ function App() {
         });
         resetTurn();
       } else {
-        console.log('those cards do not match');
         setTimeout(() => {
           resetTurn();
         }, 1000);
